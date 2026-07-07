@@ -1,4 +1,4 @@
-# Portfolio Mentor - Kevin Cazeneuve
+# Portfolio Mentor — Kevin Cazeneuve
 
 Ce dépôt centralise les preuves techniques et pédagogiques associées à ma candidature au poste de mentor à Ynov Toulouse.  
 Chaque projet listé ci-dessous est référencé par les compétences qu'il valide dans les grilles de positionnement B1, B2 et Posture.
@@ -7,147 +7,156 @@ Chaque projet listé ci-dessous est référencé par les compétences qu'il vali
 
 ## Projets
 
-| Projet | Stack | Lien |
+| Projet | Stack | Accès |
 |---|---|---|
-| YnCube | Node.js / Express / TypeScript / Prisma / MySQL / Vue 3 / Docker |  |
-| CinéDark | React / Vite / Python / Neo4j / Docker | [github.com/Ksperizer/cinedark]|
-| Pokédex React | React / TypeScript / Redux Toolkit / RTK Query / React Router v7 | [github.com/Ksperizer/react-pokemon]|
+| YnCube | Node.js / Express / TypeScript / Prisma / MySQL / Vue 3 / Docker | Extraits dans `TypeScript/` |
+| MatchDoom | Go / MySQL / WebSocket / Python | Extraits dans `Go/` et `SQL/` |
+| CinéDark | React / Vite / Python / Neo4j / Docker | [github.com/Ksperizer/cinedark](https://github.com/Ksperizer/cinedark) |
+| Pokédex React | React / TypeScript / Redux Toolkit / RTK Query / React Router v7 | [github.com/Ksperizer/react-pokemon](https://github.com/Ksperizer/react-pokemon) |
 
 ---
 
 ## Mapping compétences → preuves
 
-### B1 - Immersion Go, Git, Environnement
+### B1 — Immersion Go, Git, Environnement
 
 | Critère | Niveau | Preuve |
 |---|---|---|
-| Fondamentaux Git (add, commit, push, pull, clone) | Maîtrise | Historique de commits sur tous les repos ci-dessus - conventions de nommage, messages structurés |
-| Gestion des branches (GitFlow, merge, conflits) | Maîtrise | [YnCube - historique branches](https://github.com/Ksperizer/yncube) - stratégie de branches appliquée sur projet multi-contributeurs |
-| Collaboration en équipe (PR, code review) | Maîtrise | [YnCube - Pull Requests](https://github.com/Ksperizer/yncube/pulls) - rôle lead backend |
-| Bonnes pratiques de dépôt (README, gitignore, organisation) | Maîtrise | Ce dépôt + README de YnCube, CinéDark, Pokédex |
+| Fondamentaux Git (add, commit, push, pull, clone) | Maîtrise | Historique de commits sur CinéDark et Pokédex — conventions de nommage, messages structurés |
+| Gestion des branches (GitFlow, merge, conflits) | Maîtrise | Stratégie de branches appliquée sur projets multi-contributeurs |
+| Collaboration en équipe (PR, code review) | Maîtrise | Rôle lead backend sur YnCube (projet multi-contributeurs) |
+| Bonnes pratiques de dépôt (README, gitignore, organisation) | Maîtrise | Ce dépôt — README structuré par module, gitignore, organisation en dossiers |
 | Commandes avancées (stash, rebase, cherry-pick) | Opérationnel | Pratique sur projets collaboratifs GitHub |
-
-> **Go** : pas de projet personnel public à ce jour. Compétence exercée en contexte d'enseignement (piscine Golang Ynov, workshop Git debugging Go). Un projet CLI Go est en cours de préparation.
+| Programmation en Go (syntaxe, types, fonctions, structs) | Opérationnel | [`Go/user.go`](Go/user.go) — handlers HTTP, structs, JSON, bcrypt |
+| Organisation et structuration du code Go | Opérationnel | [`Go/main.go`](Go/main.go) — packages `back`, `handlers`, `data` séparés |
+| Communication HTTP en Go | Opérationnel | [`Go/server.go`](Go/server.go) — `gorilla/mux`, routing, WebSocket |
+| Algorithmes & logique métier en Go | Opérationnel | [`Go/matchmaking.go`](Go/matchmaking.go) — `CheckWinner`, `IsBoardFull` |
+| Gestion d'erreurs idiomatique Go | Opérationnel | [`Go/user.go`](Go/user.go) — pattern `if err != nil` systématique |
 
 ---
 
-### B1 - HTML / CSS
+### B1 — HTML / CSS
 
 | Critère | Niveau | Preuve |
 |---|---|---|
-| Structure HTML5 sémantique | Maîtrise | [YnCube - FrontEnd/index.html](https://github.com/Ksperizer/yncube/blob/main/FrontEnd/index.html) |
-| Flexbox & Grid | Maîtrise | [YnCube - composants CSS](https://github.com/Ksperizer/yncube/tree/main/FrontEnd/src/components) |
-| Responsive design (media queries, mobile-first) | Maîtrise | [YnCube - PWA déployée sur yncube.fr](https://yncube.fr) |
-| Positionnement (relative, absolute, fixed) | Maîtrise | [YnCube - styles des composants layout](https://github.com/Ksperizer/yncube/tree/main/FrontEnd/src/components/layout) |
-| Production d'interface complète | Maîtrise | [yncube.fr](https://yncube.fr) - interface en production |
+| Structure HTML5 sémantique | Maîtrise | YnCube (projet en production — yncube.fr) |
+| Flexbox & Grid | Maîtrise | YnCube FrontEnd — composants Vue avec CSS vanilla |
+| Responsive design (media queries, mobile-first) | Maîtrise | YnCube — PWA déployée, approche mobile-first |
+| Positionnement (relative, absolute, fixed) | Maîtrise | YnCube — composants layout |
+| Production d'interface complète | Maîtrise | [yncube.fr](https://yncube.fr) — interface en production |
 
 ---
 
-### B1 - Bases de données SQL
+### B1 — Bases de données SQL
 
 | Critère | Niveau | Preuve |
 |---|---|---|
-| Modélisation des données (entités, relations) | Opérationnel | [YnCube - schema Prisma](https://github.com/Ksperizer/yncube/blob/main/BackEnd/prisma/schema.prisma) - Event, Workshop, Session, Speaker, Specialty, User, Map |
-| DDL (CREATE TABLE, clés étrangères, relations) | Maîtrise | [YnCube - docker-compose.yml](https://github.com/Ksperizer/yncube/blob/main/docker-compose.yml) - MySQL 8.0 + Prisma db push |
-| DQL (SELECT, WHERE, JOIN, GROUP BY, agrégations) | Maîtrise | [YnCube - events.service.ts](https://github.com/Ksperizer/yncube/blob/main/BackEnd/src/modules/events/events.service.ts) - requêtes Prisma avec relations imbriquées |
-| DML (INSERT, UPDATE, DELETE) | Maîtrise | [YnCube - events.service.ts](https://github.com/Ksperizer/yncube/blob/main/BackEnd/src/modules/events/events.service.ts) - CRUD complet |
+| Modélisation des données (entités, relations) | Opérationnel | [`SQL/bdd.sql`](SQL/bdd.sql) — tables `users`, `queue`, `matches`, `moves` avec clés étrangères |
+| DDL (CREATE TABLE, clés étrangères, ON DELETE CASCADE) | Maîtrise | [`SQL/bdd.sql`](SQL/bdd.sql) |
+| DQL (SELECT, WHERE, JOIN, GROUP BY, agrégations) | Maîtrise | [`Go/user.go`](Go/user.go) — requêtes SQL avec classement et calcul de win rate |
+| DML (INSERT, UPDATE, DELETE) | Maîtrise | [`Go/user.go`](Go/user.go) — CRUD utilisateurs et stats |
 
 ---
 
-### B1 - Application CLI & Parsing en Go
-
-> Projet CLI Go en cours de préparation - sera ajouté dans ce dépôt.
-
----
-
-### B1 - Algorithmie
+### B1 — Application CLI & Parsing en Go
 
 | Critère | Niveau | Preuve |
 |---|---|---|
-| Implémentation en Go | Opérationnel | Projet CLI Go à venir |
-| Décomposition de problème, edge cases | Opérationnel | [YnCube - events.service.ts `duplicateEvent`](https://github.com/Ksperizer/yncube/blob/main/BackEnd/src/modules/events/events.service.ts) - duplication avec recalcul des sessions dans le temps |
+| Architecture & structuration de projet Go | Opérationnel | [`Go/main.go`](Go/main.go) + [`Go/server.go`](Go/server.go) — séparation des packages |
+| Gestion d'erreurs & robustesse | Opérationnel | [`Go/user.go`](Go/user.go) — validation des champs, messages d'erreur utilisateur |
+| Documentation README | Maîtrise | [`Go/README.md`](Go/README.md) |
 
 ---
 
-### B1 - JavaScript & DOM
+### B1 — Algorithmie
 
 | Critère | Niveau | Preuve |
 |---|---|---|
-| Fondamentaux JS (variables, types, fonctions, portée) | Maîtrise | [Pokédex - App.tsx](https://github.com/Ksperizer/react-pokemon/blob/main/src/App.tsx) |
-| Manipulation des données (map, filter, reduce, callbacks) | Maîtrise | [Pokédex - pokemonApi.ts `transformResponse`](https://github.com/Ksperizer/react-pokemon/blob/main/src/api/pokemonApi.ts) |
-| Programmation asynchrone (async/await, promesses) | Maîtrise | [Pokédex - App.tsx `loadPokemons`](https://github.com/Ksperizer/react-pokemon/blob/main/src/App.tsx) - [YnCube - auth.service.ts](https://github.com/Ksperizer/yncube/blob/main/BackEnd/src/modules/auth/auth.service.ts) |
-| POO (classes, encapsulation, héritage) | Maîtrise | [YnCube - auth.service.ts `class authService`](https://github.com/Ksperizer/yncube/blob/main/BackEnd/src/modules/auth/auth.service.ts) - [YnCube - events.service.ts `class EventsService`](https://github.com/Ksperizer/yncube/blob/main/BackEnd/src/modules/events/events.service.ts) |
+| Implémentation d'un algorithme en Go | Opérationnel | [`Go/matchmaking.go`](Go/matchmaking.go) — `CheckWinner` (lignes, colonnes, diagonales) + `IsBoardFull` |
+| Décomposition de problème, edge cases | Opérationnel | [`Go/matchmaking.go`](Go/matchmaking.go) — vérification exhaustive des 8 combinaisons gagnantes |
 
 ---
 
-### B1 - Développement Web & API
+### B1 — JavaScript & DOM
 
 | Critère | Niveau | Preuve |
 |---|---|---|
-| Fondamentaux REST (méthodes HTTP, codes de réponse) | Maîtrise | [YnCube - routes.ts](https://github.com/Ksperizer/yncube/blob/main/BackEnd/src/routes.ts) - [YnCube - config/swagger.ts](https://github.com/Ksperizer/yncube/blob/main/BackEnd/src/config/swagger.ts) |
-| Manipulation des données JSON | Maîtrise | [CinéDark - graph.py](https://github.com/Ksperizer/cinedark/blob/main/backend/app/graph.py) - [Pokédex - pokemonApi.ts](https://github.com/Ksperizer/react-pokemon/blob/main/src/api/pokemonApi.ts) |
-| Architecture web (séparation frontend/backend) | Maîtrise | [YnCube - docker-compose.yml](https://github.com/Ksperizer/yncube/blob/main/docker-compose.yml) - 3 services orchestrés (db, backend, frontend) |
-| Génération de pages dynamiques | Opérationnel | [YnCube - FrontEnd](https://github.com/Ksperizer/yncube/tree/main/FrontEnd/src/components/pages) - pages générées depuis l'API |
+| Fondamentaux JS (variables, types, fonctions, portée) | Maîtrise | [Pokédex — App.tsx](https://github.com/Ksperizer/react-pokemon/blob/main/src/App.tsx) |
+| Manipulation des données (map, filter, reduce, callbacks) | Maîtrise | [`react/pokemonApi.ts`](react/pokemonApi.ts) — `transformResponse` avec `filter` |
+| Programmation asynchrone (async/await, promesses) | Maîtrise | [`TypeScript/auth.service.ts`](TypeScript/auth.service.ts) — toutes les méthodes sont async |
+| POO (classes, encapsulation) | Maîtrise | [`TypeScript/auth.service.ts`](TypeScript/auth.service.ts) — `class authService` / [`TypeScript/events.service.ts`](TypeScript/events.service.ts) — `class EventsService` |
 
 ---
 
-### B1 - Projet Fullstack (Forum)
+### B1 — Développement Web & API
 
 | Critère | Niveau | Preuve |
 |---|---|---|
-| Architecture de l'application (routes, logique métier, BDD) | Opérationnel | [YnCube - BackEnd/src/modules/](https://github.com/Ksperizer/yncube/tree/main/BackEnd/src/modules) - feature-based (auth, events, bookings, qrcodes, scans, sessions, speakers, workshops) |
-| Authentification (inscription, connexion, sessions) | Opérationnel | [YnCube - auth.service.ts](https://github.com/Ksperizer/yncube/blob/main/BackEnd/src/modules/auth/auth.service.ts) - register, login, forgot/reset password, token JWT access + refresh |
-| Intégration fullstack | Opérationnel | [yncube.fr](https://yncube.fr) - application en production |
-| Gestion de projet & accompagnement | Opérationnel | Rôle lead backend sur YnCube - coordination frontend/backend/infra |
+| Fondamentaux REST (méthodes HTTP, codes de réponse) | Maîtrise | [`Go/server.go`](Go/server.go) — routes GET/POST + [`TypeScript/auth.service.ts`](TypeScript/auth.service.ts) |
+| Manipulation des données JSON | Maîtrise | [`Go/user.go`](Go/user.go) — `json.NewDecoder` / `json.NewEncoder` |
+| Architecture web (séparation frontend/backend) | Maîtrise | MatchDoom (Go backend + HTML/CSS/JS frontend) — YnCube (Docker Compose 3 services) |
+| Génération de pages dynamiques | Opérationnel | [`Go/server.go`](Go/server.go) — `html/template` avec données dynamiques |
 
 ---
 
-### B2 - Python Backend & FastAPI
+### B1 — Projet Fullstack (Forum)
 
 | Critère | Niveau | Preuve |
 |---|---|---|
-| POO Python appliquée au backend | Opérationnel | [CinéDark - backend/app/graph.py](https://github.com/Ksperizer/cinedark/blob/main/backend/app/graph.py) - classes et fonctions Python structurées |
-| Pydantic & configuration | Notions/bases | [CinéDark - backend/app/config.py](https://github.com/Ksperizer/cinedark/blob/main/backend/app/config.py) - `BaseSettings` Pydantic |
-| Debug & maintenance Python | Opérationnel | [CinéDark - backend/](https://github.com/Ksperizer/cinedark/tree/main/backend) - proxy Python zero-dependency avec gestion des erreurs |
-
-> FastAPI : pas de projet complet livré. Compétence REST maîtrisée via Express/TypeScript (YnCube, BeeFootFlow). Montée en compétences FastAPI prévue.
+| Architecture de l'application | Opérationnel | [`Go/server.go`](Go/server.go) — `setupStaticRoutes`, `setupPageRoutes`, `setupAPIRoutes` |
+| Authentification (inscription, connexion) | Opérationnel | [`Go/user.go`](Go/user.go) — `RegisterUser` + `LoginUser` avec bcrypt |
+| Gestion de la base de données (CRUD) | Opérationnel | [`Go/user.go`](Go/user.go) — stats, leaderboard, queue matchmaking |
+| Intégration fullstack | Opérationnel | [yncube.fr](https://yncube.fr) — application en production |
 
 ---
 
-### B2 - React.js & TypeScript
+### B2 — Python Backend & FastAPI
 
 | Critère | Niveau | Preuve |
 |---|---|---|
-| Fondamentaux TypeScript (types, interfaces, génériques) | Maîtrise | [Pokédex - types/auth.type.ts](https://github.com/Ksperizer/react-pokemon/blob/main/src/types/auth.type.ts) - [YnCube - BackEnd/src/types/typage.ts](https://github.com/Ksperizer/yncube/blob/main/BackEnd/src/types/typage.ts) |
-| Composants React fonctionnels | Maîtrise | [Pokédex - pages/](https://github.com/Ksperizer/react-pokemon/tree/main/src/pages) - [Pokédex - components/](https://github.com/Ksperizer/react-pokemon/tree/main/src/components) |
-| Gestion de l'état (useState, useEffect, Redux) | Maîtrise | [Pokédex - store/index.ts](https://github.com/Ksperizer/react-pokemon/blob/main/src/store/index.ts) - Redux Toolkit avec deux API slices |
-| Gestion de l'état avancée (slice, extraReducers) | Maîtrise | [Pokédex - store/slice/authSlice.ts](https://github.com/Ksperizer/react-pokemon/blob/main/src/store/slice/authSlice.ts) - `addMatcher` sur RTK Query |
-| Logique métier dans le store | Maîtrise | [Pokédex - store/slice/teamSlice.ts](https://github.com/Ksperizer/react-pokemon/blob/main/src/store/slice/teamSlice.ts) - MAX_TEAM_SIZE, déduplication, sélecteurs typés |
-| Navigation & architecture SPA (React Router) | Opérationnel | [Pokédex - router/routes.tsx](https://github.com/Ksperizer/react-pokemon/blob/main/src/router/routes.tsx) - routes imbriquées, RootLayout, 404, routes dynamiques |
-| Communication avec les APIs (RTK Query) | Maîtrise | [Pokédex - api/pokemonApi.ts](https://github.com/Ksperizer/react-pokemon/blob/main/src/api/pokemonApi.ts) - `createApi`, `fetchBaseQuery`, `transformResponse`, `providesTags` |
-| Auth JWT côté client | Maîtrise | [Pokédex - store/api/authApi.ts](https://github.com/Ksperizer/react-pokemon/blob/main/src/store/api/authApi.ts) - `prepareHeaders`, décodage JWT, `transformResponse` |
-| Outils & environnement (Vite, TypeScript) | Maîtrise | [Pokédex - vite.config.ts](https://github.com/Ksperizer/react-pokemon/blob/main/vite.config.ts) - [Pokédex - tsconfig.json](https://github.com/Ksperizer/react-pokemon/blob/main/tsconfig.json) |
+| POO Python appliquée au backend | Opérationnel | [`Python/graph.py`](Python/graph.py) — fonctions Python structurées, requêtes Cypher Neo4j |
+| Pydantic & configuration | Notions/bases | [`Python/config.py`](Python/config.py) — `BaseSettings` Pydantic |
+| Architecture backend Python | Opérationnel | [`Python/graph.py`](Python/graph.py) — séparation requêtes / logique métier |
+
+> FastAPI : pas de projet complet livré. Compétence REST maîtrisée via Express/TypeScript (YnCube). Montée en compétences FastAPI prévue.
 
 ---
 
-### B2 - SQL avancé
+### B2 — React.js & TypeScript
 
 | Critère | Niveau | Preuve |
 |---|---|---|
-| Optimisation des performances (index SQL) | Opérationnel | [YnCube - schema Prisma](https://github.com/Ksperizer/yncube/blob/main/BackEnd/prisma/schema.prisma) - index définis sur les clés étrangères |
-| Logique métier en base (procédures stockées) | Opérationnel | Projet MatchDoom - `sp_recalculate_user_stats` (repo privé, extraits disponibles sur demande) |
-| Automatisation (triggers BEFORE/AFTER INSERT/UPDATE) | Notions/bases | Projet MatchDoom - `tr_users_login_update`, `tr_queue_cleanup` (repo privé, extraits disponibles sur demande) |
-| Architecture & choix techniques (MySQL vs PostgreSQL) | Opérationnel | YnCube (MySQL 8.0) - Pokédex backend (PostgreSQL) - choix argumentés selon contexte |
+| Fondamentaux TypeScript (types, interfaces, génériques) | Maîtrise | [`TypeScript/auth.middleware.ts`](TypeScript/auth.middleware.ts) — types stricts, `IJwtPayload`, `UserRole` |
+| Composants React fonctionnels | Maîtrise | [Pokédex — pages/](https://github.com/Ksperizer/react-pokemon/tree/main/src/pages) |
+| Gestion de l'état (Redux Toolkit) | Maîtrise | [`react/index.ts`](react/index.ts) — store avec deux API slices |
+| Gestion de l'état avancée (slice, extraReducers) | Maîtrise | [`react/authSlice.ts`](react/authSlice.ts) — `addMatcher` sur RTK Query |
+| Logique métier dans le store | Maîtrise | [`react/teamSlice.ts`](react/teamSlice.ts) — MAX_TEAM_SIZE, déduplication, sélecteurs typés |
+| Navigation & architecture SPA | Opérationnel | [`react/routes.tsx`](react/routes.tsx) — routes imbriquées, RootLayout, 404, routes dynamiques |
+| Communication avec les APIs (RTK Query) | Maîtrise | [`react/pokemonApi.ts`](react/pokemonApi.ts) — `createApi`, `fetchBaseQuery`, `transformResponse` |
+| Auth JWT côté client | Maîtrise | [`react/authApi.ts`](react/authApi.ts) — `prepareHeaders`, décodage JWT |
+| Outils & environnement (Vite, TypeScript) | Maîtrise | [Pokédex — vite.config.ts](https://github.com/Ksperizer/react-pokemon/blob/main/vite.config.ts) |
 
 ---
 
-### B2 - Data Engineering Python
+### B2 — SQL avancé
 
 | Critère | Niveau | Preuve |
 |---|---|---|
-| Manipulation Pandas, import/export, nettoyage, transformation | Opérationnel | Projets data Python personnels (repos privés) |
-| Extraction depuis API REST | Opérationnel | [CinéDark - backend](https://github.com/Ksperizer/cinedark/tree/main/backend) - agrégation de 5 pages TMDb, fallback FR→EN |
-| Architecture & choix NoSQL vs SQL | Opérationnel | [CinéDark - docs/neo4j-schema.md](https://github.com/Ksperizer/cinedark/blob/main/docs/neo4j-schema.md) - modélisation en graphe Neo4j argumentée |
+| Modélisation relationnelle | Opérationnel | [`SQL/bdd.sql`](SQL/bdd.sql) — 4 tables, relations, contraintes |
+| Optimisation des performances (index SQL) | Opérationnel | YnCube schema Prisma — index sur clés étrangères |
+| Logique métier en base (procédures stockées) | Opérationnel | Projet MatchDoom — `sp_recalculate_user_stats` (extrait disponible sur demande) |
+| Automatisation (triggers) | Notions/bases | Projet MatchDoom — triggers BEFORE/AFTER UPDATE (extraits disponibles sur demande) |
+| Architecture & choix techniques (MySQL vs PostgreSQL) | Opérationnel | YnCube (MySQL 8.0) — CinéDark (Neo4j) — Pokédex backend (PostgreSQL) |
+
+---
+
+### B2 — Data Engineering Python
+
+| Critère | Niveau | Preuve |
+|---|---|---|
+| Manipulation Pandas, import/export, nettoyage | Opérationnel | Projets data Python personnels |
+| Extraction depuis API REST | Opérationnel | [`Python/graph.py`](Python/graph.py) — agrégation et enrichissement de données depuis TMDb |
+| Architecture & choix NoSQL vs SQL | Opérationnel | [`Python/graph.py`](Python/graph.py) — modélisation en graphe Neo4j (Movie, Person, Genre, relations ACTED_IN / DIRECTED / COLLABORATED_WITH) |
 
 ---
 
@@ -155,16 +164,14 @@ Chaque projet listé ci-dessous est référencé par les compétences qu'il vali
 
 | Critère | Niveau | Preuve |
 |---|---|---|
-| Transmission des connaissances | Maîtrise | Mentor Ynov Toulouse depuis sept. 2025 - modules Go, JS, TS, Java, C#, Python sur B1/B2|
+| Transmission des connaissances | Maîtrise | Mentor Ynov Toulouse depuis sept. 2025 — Go, JS, TS, Java, C#, Python sur B1/B2/B3 |
 | Création de supports pédagogiques | Maîtrise | Sujets projets B1 (NetflixLight, RetroArcade, PixelArt Studio), module Java avancé B2, workshop Git/Go |
 | Feedback & code review | Maîtrise | Rubriques d'évaluation conçues pour NetflixLight (JS/TMDB) et TaskBoard (C#) |
 | Animation de groupe | Maîtrise | Piscine Golang Ynov, workshop Git debugging Go en binômes |
-| Développement de l'autonomie | Maîtrise | Posture de guide systématique - orientation vers la documentation officielle plutôt que solutions directes |
+| Développement de l'autonomie | Maîtrise | Posture de guide systématique — orientation vers la documentation plutôt que solutions directes |
 
 ---
 
 ## À venir
 
-- Projet CLI Go (parsing, I/O fichiers, tests unitaires table-driven, README complet)
-- Publication des extraits SQL (triggers et procédures MatchDoom)
-- Supports de cours Ynov (sujets projets B1, module Java B2)
+- Supports de cours Ynov (`pedagogique/`) — sujets projets B1, module Java B2, rubriques d'évaluation
